@@ -2,12 +2,13 @@
 
 namespace ImLiam\IndefiniteArticle\Tests\Unit;
 
+use PHPUnit\Framework\Attributes\Test;
 use ImLiam\IndefiniteArticle\Tests\TestCase;
 use ImLiam\IndefiniteArticle\IndefiniteArticle;
 
 class IndefiniteArticleTest extends TestCase
 {
-    /** @test */
+    #[Test]
     public function given_phrases_return_the_correct_articles()
     {
         // Valid "a" articles
@@ -50,7 +51,7 @@ class IndefiniteArticleTest extends TestCase
         $this->assertEquals('an Uzbekistani', (new IndefiniteArticle('Uzbekistani'))->parse());
     }
 
-    /** @test */
+    #[Test]
     public function it_can_process_a_large_word_list()
     {
         $wordList = include_once(__DIR__ . '/../fixtures/words.php');
