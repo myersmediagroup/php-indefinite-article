@@ -3366,7 +3366,7 @@ class IndefiniteArticle
         return $this->find($this->word) . ' ' . $this->word;
     }
 
-    protected function find(string $word = null, array $object = null, string $article = null): string
+    protected function find(?string $word = null, ?array $object = null, ?string $article = null): string
     {
         if (is_null($word)) {
             return $article;
